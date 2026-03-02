@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETHERN | Oficial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #000000;
+            --card-bg: #0d0d0d;
+            --accent-color: #ff0000; 
+            --text-main: #ffffff;
+            --text-secondary: #a0a0a0;
+            --border-color: #222222;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .promo-bar {
+            background-color: var(--accent-color);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header {
+            padding: 15px 5%;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 1000;
+            flex-direction: column; 
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 50px; 
+            width: auto;
+            object-fit: contain;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            transition: 0.3s;
+            letter-spacing: 1.5px;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            width: 100%;
+            height: 450px; 
+            max-height: 60vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('IMG1.png') center center / contain no-repeat;
+            background-color: #050505; 
+            border-bottom: 1px solid var(--border-color);
+            margin-top: 10px;
+        }
+
+        .container {
+            padding: 40px 5%;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            text-transform: uppercase;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .product-image {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background-color: #111;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-info h3 {
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            min-height: 2.4rem;
+        }
+
+        .coming-soon {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            padding: 40px 5%;
+            background-color: #050505;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .social-links {
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            color: var(--text-main);
+            font-size: 1rem;
+            margin: 0 12px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .hero { height: 300px; }
+            .logo-img { height: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="promo-bar">
+        SOLO ENVIOS EN EL ESTADO
+    </div>
+
+    <header>
+        <a href="index.html" class="logo-container">
+            <img src="logo.png" alt="AETHERN LOGO" class="logo-img">
+        </a>
+        
+        <nav>
+            <a href="categorías.html">Categorías</a>
+            <a href="index.html">Productos</a>
+            <a href="info.html">Info</a>
+        </nav>
+    </header>
+
+    <section class="hero"></section>
+
+    <main class="container">
+        <h2 class="section-title">Nuevos Drops</h2>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="jplblp.jpg" alt="Jean Paul le beau le parfum">
+                </div>
+                <div class="product-info">
+                    <h3>Jean Paul le beau le parfum</h3>
+                    <p class="coming-soon">Coming soon</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="muratravis.jpg" alt="Innedit Mura travis Crystals Black">
+                </div>
+                <div class="product-info">
+                    <h3>Innedit Mura travis Crystals Black</h3>
+                    <p class="coming-soon">Coming soon</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="versacepourhomme.jpg" alt="Versace pour homme">
+                </div>
+                <div class="product-info">
+                    <h3>Versace pour homme</h3>
+                    <p class="coming-soon">Coming soon</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="sadboyz.jpg" alt="Dandy hats $ad Boyz">
+                </div>
+                <div class="product-info">
+                    <h3>Dandy hats $ad Boyz</h3>
+                    <p class="coming-soon">Coming soon</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-links">
+          
+    </footer>
+
+</body>
+</html>
